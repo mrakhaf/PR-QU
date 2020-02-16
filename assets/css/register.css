@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+/* @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap'); */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+}
+
+.box {
+    width: 384px;
+    min-height: 480px;
+    height: auto;
+    background: linear-gradient(to right, #FF414C, #FF416C);
+    margin: 0 auto;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.box__header--modifier {
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.box__username {
+    font-family: 'Quicksand', sans-serif;
+    color: white;
+    letter-spacing: 1px;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.box__content {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    color: white;
+    font-weight: bold;
+}
+
+.signup {
+    border-radius: 20px;
+    border: 1px solid #FF4B2B;
+    background-color: #FF4B2B;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+    background-color: transparent;
+    border-color: #FFFFFF;
+}
+
+.signup:active {
+    transform: scale(0.90);
+}
+
+.signup:focus {
+    outline: none;
+}

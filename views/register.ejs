@@ -1,3 +1,22 @@
-<%- msg %>
-<%- user.username %>
-<a href="/">login</a>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/register.css">
+    <title>Account Created</title>
+</head>
+<body>
+    <div class="box">
+        <div class="box__header">
+            <h1 class="box__header--modifier"><%= msg %></h1>
+        </div>
+        <div class="box__username">
+            <p><%= user.username %></p>
+        </div>
+        <div class="box__button">
+            <button class="signup" onclick="signup()">Sign Up</button>
+        </div>
+    </div>
+</body>
+<script src="../assets/js/register.js"></script>
+</html>

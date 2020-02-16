@@ -55,7 +55,7 @@ router.post('/register', (req, res) => {
     })
     .then(user => {
       res.render('register', {
-        msg: 'success create account',
+        msg: 'Success create account',
         user: user
       })
     })

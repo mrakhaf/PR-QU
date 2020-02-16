@@ -5,6 +5,9 @@ const bp = require('body-parser')
 const PORT = process.env.PORT || 3000
 const passport = require('./config/passport')
 const methodOveride = require('method-override')
+const path = require('path')
+
+app.use('/assets', express.static(path.join(__dirname,'assets')))
 
 //methodOverride
 app.use(methodOveride('_method'))
