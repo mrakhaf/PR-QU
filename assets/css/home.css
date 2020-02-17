@@ -1,9 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Red+Hat+Display&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to right, #FF414C, #FF416C);
 }
 
 .navbar {
@@ -15,6 +20,7 @@
     justify-content: space-between;
     padding: 20px 26px;
     background: linear-gradient(to right, #FF414C, #FF416C);
+    z-index: 3;
 }
 
 .navbar__content--modifier {
@@ -22,4 +28,120 @@
     font-weight: bold;
     color: white;
     font-size: 20px;
+}
+
+.header {
+    width: 100%;
+    height: auto;
+    padding: 100px 85px 50px 85px;
+    background-color: wheat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header__title {
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 19px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.header__input {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__input--modifier {
+    width: 346px;
+    height: 52px;
+    text-align: center;
+    font-size: 25px;
+    color: #A3A3A3;
+    font-family: 'Red Hat Display', sans-serif;
+    font-weight: bold;
+    border: 3px solid #FF416C;
+    border-radius: 8px;
+    outline: none;
+    margin-bottom: 30px;
+}
+
+.header__button {
+    width: 100%;
+    height: auto;
+}
+
+.header__button--modifier {
+    width: 100%;
+    height: 55px;
+    font-size: 25px;
+    font-family: 'Red Hat Display', sans-serif;
+    color: white;
+    background: #FF416C;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    outline: none;
+    transition: transform 80ms ease-in;
+    border: none;
+}
+
+.header__button--modifier:active {
+    transform: scale(0.95);
+}
+
+.home__content {
+    width: 100%;
+    height: 100%;
+}
+
+.home__title {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    text-align: center;
+    gap: 70px;
+    /* display: flex;
+    flex-direction: row;
+    justify-content: space-between; */
+    padding: 20px 130px;
+}
+
+.home__titleContent {
+    border-bottom: 1px solid white;
+    padding: 5px 15px;
+}
+
+.home__titleContent--modifier {
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 25px;
+    color: white;
+    font-weight: bold;
+}
+
+.todo__container {
+    width: 100%;
+    height: auto;
+    /* margin: 30px 0px; */
+    margin-bottom: 30px;
+}
+
+.todo__wrapper {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    gap: 70px;
+    text-align: center;
+    padding: 10px 130px;
+}
+
+.todo__content--modifier {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    color: white;
 }

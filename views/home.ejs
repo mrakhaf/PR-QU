@@ -68,5 +68,54 @@
       <p class="navbar__content--modifier">Log Out</p>
     </div>
   </div>
+  <form action="/todo/<%= user.username %>/tambah" method="post">
+  <div class="header">
+    <div class="header__title">
+      <h1>What are you going to do ?</h1>
+    </div>
+    <div class="header__input">
+      <div class="header__inputBox">
+        <input type="text" name="judul" id="" class="header__input--modifier" placeholder="Title" required autofocus spellcheck="false" autocomplete="off">
+      </div>
+      <div class="header__inputBox">
+        <input type="text" name="desc" id="" class="header__input--modifier" placeholder="Description" required spellcheck="false" autocomplete="off">
+      </div>
+      <div class="header__inputBox">
+        <input type="date" name="deadline" id="" class="header__input--modifier" placeholder="Deadline" required>
+      </div>
+    </div>
+    <div class="header__button">
+      <button type="submit" class="header__button--modifier">Submit your to-do-list</button>
+    </div>
+  </div>
+  </form>
+  <div class="home__content">
+    <div class="home__title">
+      <div class="home__titleContent">
+        <p class="home__titleContent--modifier">Title</p>
+      </div>
+      <div class="home__titleContent">
+        <p class="home__titleContent--modifier">Description</p>
+      </div>
+      <div class="home__titleContent">
+        <p class="home__titleContent--modifier">Deadline</p>
+      </div>
+    </div>
+    <% todo.forEach(function(todo){ %>
+    <div class="todo__container">
+      <div class="todo__wrapper">
+        <div class="todo__title">
+          <p class="todo__content--modifier"><%= todo.nama_todo %></p>
+        </div>
+        <div class="todo__description">
+          <p class="todo__content--modifier"><%= todo.description %></p>
+        </div>
+        <div class="todo__deadline">
+          <p class="todo__content--modifier"><%= todo.deadline %></p>
+        </div>
+      </div>
+    </div>
+    <% }) %>
+  </div>
 </body>
 </html>
