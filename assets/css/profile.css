@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    width: 100%;
+    height: 300px;
+    background: linear-gradient(to right, #FF414C, #FF416C);
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__content {
+    /* font-family: 'Montserrat', sans-serif; */
+    font-family: 'Quicksand';
+}
+
+.header__content--modifier {
+    font-size: 35px;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 1px;
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+    padding: 30px 100px;
+}
+
+.content__title {
+    margin-bottom: 20px;
+    font-family: 'Quicksand';
+    font-size: 25px;
+    text-transform: capitalize;
+}
+
+.content__box {
+    width: 100%;
+    height: auto;
+    background: linear-gradient(to right, #FF414C, #FF416C);
+    padding: 25px;
+    border-radius: 5px;
+}
+
+.content__boxContent {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 0.2fr 0.8fr;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 5px;
+}
+
+.profileButton {
+    margin-top: 50px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.homeButton {
+    margin-right: 20px;
+}
+
+.homeButton--button {
+    padding: 10px;
+    border-radius: 3px;
+    border: none;
+    background-color: #a7e9af;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    cursor: pointer;
+    transition: 0.5s;
+    outline: none;
+}
+
+.homeButton--button:active {
+    transform: scale(0.95);
+}
+
+.logoutButton--button:active {
+    transform: scale(0.95);
+}
+
+.logoutButton--button {
+    background-color: #e32249;
+    padding: 10px;
+    border-radius: 3px;
+    border: none;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    cursor: pointer;
+    transition: 0.5s;
+    outline: none;
+}

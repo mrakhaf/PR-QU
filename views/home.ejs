@@ -48,12 +48,12 @@
   </body>
 </html> -->
 
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../assets/css/home.css">
+  <link rel="stylesheet" href="../assets/css/scrollBar.css">
   <title>Home</title>
 </head>
 <body>
@@ -62,10 +62,10 @@
       <p class="navbar__content--modifier">PR-Qu Apps</p>
     </div>
     <div class="navbar__content">
-      <p class="navbar__content--modifier"><%= user.username %></p>
+      <p class="navbar__content--modifier" onclick="profile()"><%= user.username %></p>
     </div>
     <div class="navbar__content">
-      <p class="navbar__content--modifier">Log Out</p>
+      <p class="navbar__content--modifier" onclick="logout()">Log Out</p>
     </div>
   </div>
   <form action="/todo/<%= user.username %>/tambah" method="post">
@@ -118,4 +118,5 @@
     <% }) %>
   </div>
 </body>
+<script src="../assets/js/button.js"></script>
 </html>
