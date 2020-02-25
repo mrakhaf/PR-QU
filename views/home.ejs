@@ -102,7 +102,7 @@
       </div>
     </div>
     <% todo.forEach(function(todo){ %>
-    <div class="todo__container">
+    <div class="todo__container" id="todo__container">
       <div class="todo__wrapper">
         <div class="todo__title">
           <p class="todo__content--modifier"><%= todo.nama_todo %></p>
@@ -114,9 +114,15 @@
           <p class="todo__content--modifier"><%= todo.deadline %></p>
         </div>
       </div>
+      <div class="deleteBox" id="deleteBox">
+        <a href="">
+          <img src="../assets/icons/dustbin.svg" alt="" class="deleteIcons">
+        </a>
+      </div>
     </div>
     <% }) %>
   </div>
 </body>
 <script src="../assets/js/button.js"></script>
+<script src="../assets/js/home.js"></script>
 </html>

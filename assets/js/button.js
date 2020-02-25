@@ -13,3 +13,7 @@ const profile = () => {
 const home = () => {
     window.location.assign('/')
 }
+
+const getContainerHeight = () => {
+    document.getElementById('todo__container').offsetHeight
+}

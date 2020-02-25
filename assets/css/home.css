@@ -154,3 +154,29 @@ body {
     font-size: 15px;
     color: white;
 }
+
+.deleteBox {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    top: -39;
+    right: 30;
+    float: right;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    /* -webkit-box-shadow: 10px 10px 39px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 10px 10px 39px 0px rgba(0,0,0,0.5);
+    box-shadow: 10px 10px 39px 0px rgba(0,0,0,0.5); */
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.deleteBox:active {
+    transform: scale(0.90);
+    transition: 0.5s;
+}
+
+.deleteIcons {
+    height: 100%;
+}
