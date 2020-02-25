@@ -159,8 +159,8 @@ body {
     position: relative;
     width: 40px;
     height: 40px;
-    top: -39;
-    right: 30;
+    top: -39px;
+    right: 30px;
     float: right;
     background-color: white;
     border-radius: 10px;
@@ -170,6 +170,7 @@ body {
     box-shadow: 10px 10px 39px 0px rgba(0,0,0,0.5); */
     transition: 0.5s;
     cursor: pointer;
+    display: none;
 }
 
 .deleteBox:active {
@@ -179,4 +180,28 @@ body {
 
 .deleteIcons {
     height: 100%;
+}
+
+.deleteBox2 {
+    float: right;
+    position: relative;
+    top: -35px;
+    right: 35px;
+    -webkit-box-shadow: 10px 10px 39px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 10px 10px 39px 0px rgba(0,0,0,0.5);
+    box-shadow: 10px 10px 39px 0px rgba(0,0,0,0.5);
+    /* display: none; */
+}
+
+.deleteButton {
+    width: auto;
+    height: auto;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 10px;
+    font-family: 'Montserrat', sans-serif;
+    color: lightcoral;
+    font-weight: bold;
+    letter-spacing: 1px;
 }

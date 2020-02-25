@@ -102,6 +102,7 @@
       </div>
     </div>
     <% todo.forEach(function(todo){ %>
+    <form action="/todo/hapus/<%= todo.id_todo %>?_method=DELETE" method="POST">
     <div class="todo__container" id="todo__container">
       <div class="todo__wrapper">
         <div class="todo__title">
@@ -115,11 +116,15 @@
         </div>
       </div>
       <div class="deleteBox" id="deleteBox">
-        <a href="">
+        <a href="/hapus/<%= todo.id_todo %>?_method=DELETE">
           <img src="../assets/icons/dustbin.svg" alt="" class="deleteIcons">
         </a>
       </div>
+      <div class="deleteBox2">
+        <button class="deleteButton">Done</button>
+      </div>
     </div>
+    </form>
     <% }) %>
   </div>
 </body>
