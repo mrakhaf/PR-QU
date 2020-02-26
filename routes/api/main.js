@@ -26,9 +26,6 @@ router.get('/', (req, res) => {
   }
 })
 
-router.get('/login', (req, res) => {
-  res.render('loginregister')
-})
 
 router.get('/logout', function (req, res) {
   req.logout()
@@ -62,12 +59,14 @@ router.post('/register', (req, res) => {
     .catch(err => console.log(err))
 })
 
-
 //Login
 router.post('/login', (req, res, next) => {
   passport.authenticate('local', {
     successRedirect: '/',
-    failureRedirect: '/login'
+    failureRedirect: '/',
+    failureFlash: true
   })(req, res, next)
 })
+
+
 module.exports = router

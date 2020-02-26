@@ -15,11 +15,15 @@ passport.use(
       })
       .then(user => {
         if (!user) {
-          return cb(null, false)
+          return cb(null, false, {
+            message: 'Invalid username or password'
+          })
         }
         const compare = bcrypt.compareSync(password, user.password)
         if (!compare) {
-          return cb(null, false)
+          return cb(null, false, {
+            message: 'Invalid username or password'
+          })
         }
         return cb(null, user)
       })

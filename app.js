@@ -6,8 +6,12 @@ const PORT = process.env.PORT || 3000
 const passport = require('./config/passport')
 const methodOveride = require('method-override')
 const path = require('path')
+const flash = require('connect-flash')
 
-app.use('/assets', express.static(path.join(__dirname,'assets')))
+//flash
+app.use(flash())
+
+app.use('/assets', express.static(path.join(__dirname, 'assets')))
 
 //methodOverride
 app.use(methodOveride('_method'))
@@ -20,6 +24,14 @@ app.use(
     saveUninitialized: false
   })
 )
+
+//Global Vars
+app.use(function (req, res, next) {
+  res.locals.success_msg = req.flash('success_msg');
+  res.locals.error_msg = req.flash('error_msg');
+  res.locals.error = req.flash('error');
+  next();
+});
 
 //Passport Middleware
 app.use(passport.initialize())
