@@ -82,24 +82,26 @@
       <h2 class="home__contentResponsiveHeader--modifier">Your to-do-list</h2>
     </div>
     <% todo.forEach(function(todo){ %>
-      <div class="home__contentResponsiveContainer">
-        <div class="home__contentResponsiveTitle" onclick="dropDown(<%= todo.id_todo %>)">
-          <p class="home__contentResponsiveTitle--modifier"><%= todo.nama_todo %></p>
+      <form action="/todo/hapus/<%= todo.id_todo %>?_method=DELETE" method="POST">
+        <div class="home__contentResponsiveContainer">
+          <div class="home__contentResponsiveTitle" onclick="dropDown(<%= todo.id_todo %>)">
+            <p class="home__contentResponsiveTitle--modifier"><%= todo.nama_todo %></p>
+          </div>
+          <div class="home__contentResponsiveDescriptionWrapper">
+          <div class="home__contentResponsiveDetails" id="home__contentResponsiveDetails<%= todo.id_todo %>">
+              <div class="home__contentResponsiveDescription">
+                <p class="home__contentResponsiveDescription--modifier"><%= todo.description %></p>
+              </div>
+              <div class="home__contentResponsiveDeadline">
+                <p class="home__contentResponsiveDeadline--modifier"><%= todo.deadline %></p>
+              </div>
+              <div class="home__contentResponsiveButton">
+                <button class="deleteButton">Done</button>
+              </div>
+          </div>
+          </div>
         </div>
-        <div class="home__contentResponsiveDescriptionWrapper">
-        <div class="home__contentResponsiveDetails" id="home__contentResponsiveDetails<%= todo.id_todo %>">
-            <div class="home__contentResponsiveDescription">
-              <p class="home__contentResponsiveDescription--modifier"><%= todo.description %></p>
-            </div>
-            <div class="home__contentResponsiveDeadline">
-              <p class="home__contentResponsiveDeadline--modifier"><%= todo.deadline %></p>
-            </div>
-            <div class="home__contentResponsiveButton">
-              <button class="deleteButton">Done</button>
-            </div>
-        </div>
-        </div>
-      </div>
+      </form>
     <% }) %>
   </div>
 </body>
