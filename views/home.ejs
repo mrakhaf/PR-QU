@@ -1,53 +1,3 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>PR-QU <%= user.name %></title>
-  </head>
-
-  <body>
-    <p>
-      Hello, <%= user.username %> . View your <a href="/profile">profile</a>.
-    </p>
-
-    <form action="/todo/<%= user.username %>/tambah" method="post">
-      Judul
-      <input type="text" name="judul" />
-      Description
-      <input type="text" name="desc" />
-      Deadline
-      <input type="text" name="deadline" />
-      <button>Tambah</button>
-    </form>
-
-    <table>
-      <tr>
-        <td>Judul</td>
-        <td>Deskripsi</td>
-        <td>Deadline</td>
-        <td></td>
-      </tr>
-      <% todo.forEach(function(todo){ %>
-      <tr>
-        <td><%= todo.nama_todo %></td>
-        <td><%= todo.description %></td>
-        <td><%= todo.deadline %></td>
-        <td>
-          <form
-            action="/todo/hapus/<%= todo.id_todo %>?_method=DELETE"
-            method="POST"
-          >
-            <button>hapus</button>
-          </form>
-        </td>
-      </tr>
-      <% }) %>
-    </table>
-  </body>
-</html> -->
-
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -64,7 +14,7 @@
     <div class="navbar__content">
       <p class="navbar__content--modifier" onclick="profile()"><%= user.username %></p>
     </div>
-    <div class="navbar__content">
+    <div class="navbar__content logout">
       <p class="navbar__content--modifier" onclick="logout()">Log Out</p>
     </div>
   </div>
@@ -125,6 +75,31 @@
       </div>
     </div>
     </form>
+    <% }) %>
+  </div>
+  <div class="home__contentResponsive">
+    <div class="home__contentResponsiveHeader">
+      <h2 class="home__contentResponsiveHeader--modifier">Your to-do-list</h2>
+    </div>
+    <% todo.forEach(function(todo){ %>
+      <div class="home__contentResponsiveContainer">
+        <div class="home__contentResponsiveTitle" onclick="dropDown(<%= todo.id_todo %>)">
+          <p class="home__contentResponsiveTitle--modifier"><%= todo.nama_todo %></p>
+        </div>
+        <div class="home__contentResponsiveDescriptionWrapper">
+        <div class="home__contentResponsiveDetails" id="home__contentResponsiveDetails<%= todo.id_todo %>">
+            <div class="home__contentResponsiveDescription">
+              <p class="home__contentResponsiveDescription--modifier"><%= todo.description %></p>
+            </div>
+            <div class="home__contentResponsiveDeadline">
+              <p class="home__contentResponsiveDeadline--modifier"><%= todo.deadline %></p>
+            </div>
+            <div class="home__contentResponsiveButton">
+              <button class="deleteButton">Done</button>
+            </div>
+        </div>
+        </div>
+      </div>
     <% }) %>
   </div>
 </body>

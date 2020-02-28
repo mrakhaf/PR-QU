@@ -105,3 +105,25 @@
     transition: 0.5s;
     outline: none;
 }
+
+@media(max-width:500px) {
+    .content {
+        padding: 30px 20px;
+    }
+
+    .content__boxContent {
+        font-size: 13px;
+    }
+
+    .header {
+        height: 200px;
+    }
+
+    .header__content--modifier {
+        font-size: 25px;
+    }
+
+    .content__title {
+        font-size: 20px;
+    }
+}
